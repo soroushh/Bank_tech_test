@@ -1,7 +1,7 @@
 feature tests
 >> IRB
 
-require "./lib/acount.rb"
+require "./lib/account.rb"
 
 account = Account.new()
 
