@@ -5,12 +5,12 @@ require "./lib/acount.rb"
 
 account = Account.new()
 
-account.add_deposite(1000, "10-01-2012")
+account.add_deposite(1000)
 
-account.add_deposite(2000, "13-01-2012")
+account.add_deposite(2000)
 
 
-account.withdraw(500, "14-01-2012")
+account.withdraw(500)
 
 account.print_statement()
 

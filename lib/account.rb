@@ -8,4 +8,10 @@ class Account
     @balance += money_ammount
   end
 
+  def withdraw(money_ammount)
+    @balance -= money_ammount
+  end
+
+  
+
 end
