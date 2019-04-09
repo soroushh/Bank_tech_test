@@ -3,7 +3,7 @@ feature tests
 
 require "./lib/acount.rb"
 
-acount = Account.new()
+account = Account.new()
 
 account.add_deposite(1000, "10-01-2012")
 
