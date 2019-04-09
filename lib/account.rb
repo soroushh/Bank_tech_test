@@ -7,12 +7,13 @@ class Account
 
   def add_deposite(money_ammount, date = Time.now.strftime("%d/%m/%Y"))
     @balance += money_ammount
-    @account_history.push({date: date , credit: money_ammount.to_s+".00", debit:"", balance: @balance.to_s+".00" })
+    add_transaction_to_account_history_depositing(money_ammount, date)
+
   end
 
   def withdraw(money_ammount, date = Time.now.strftime("%d/%m/%Y"))
     @balance -= money_ammount
-    @account_history.push({date: date , credit:"", debit:money_ammount.to_s+".00", balance: @balance.to_s+".00" })
+    add_transaction_to_account_history__withdrawing(money_ammount, date)
   end
 
   def print_statement()
@@ -27,6 +28,14 @@ class Account
       the_statement_text += "#{transfer[:date]} || #{transfer[:credit]} || #{transfer[:debit]} || #{transfer[:balance]}\n"
     end
     return the_statement_text
+  end
+
+  def add_transaction_to_account_history_depositing(money_ammount, date = Time.now.strftime("%d/%m/%Y"))
+    @account_history.push({date: date , credit: money_ammount.to_s+".00", debit:"", balance: @balance.to_s+".00" })
+  end
+
+  def add_transaction_to_account_history__withdrawing(money_ammount, date = Time.now.strftime("%d/%m/%Y"))
+    @account_history.push({date: date , credit:"", debit:money_ammount.to_s+".00", balance: @balance.to_s+".00" })
   end
 
 end
