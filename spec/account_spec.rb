@@ -3,7 +3,7 @@ describe Account do
   it 'we are able to make an account' do
     account = Account.new
     # expect(account.print_statement).to eq "date || credit || debit || balance\n"
-    expect(account.show_balance).to eq 0 
+    expect(account.show_balance).to eq 0
   end
 
   describe '#add_deposite' do
@@ -11,7 +11,8 @@ describe Account do
       account = Account.new
       account.add_deposite(500,"14/01/2012")
       # expect(account.balance).to eq 500
-      expect(account.print_statement).to eq "date || credit || debit || balance\n14/01/2012 || 500.00 ||  || 500.00\n"
+      # expect(account.print_statement).to eq "date || credit || debit || balance\n14/01/2012 || 500.00 ||  || 500.00\n"
+      expect(account.show_balance).to eq 500
     end
   end
 
@@ -20,7 +21,8 @@ describe Account do
       account = Account.new(1000)
       account.withdraw(500, "14/01/2012")
       # expect(account.balance).to eq 500
-      expect(account.print_statement).to eq "date || credit || debit || balance\n14/01/2012 ||  || 500.00 || 500.00\n"
+      # expect(account.print_statement).to eq "date || credit || debit || balance\n14/01/2012 ||  || 500.00 || 500.00\n"
+      expect(account.show_balance).to eq 500
     end
   end
 
