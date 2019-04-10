@@ -2,7 +2,8 @@ require 'account.rb'
 describe Account do
   it 'we are able to make an account' do
     account = Account.new
-    expect(account.print_statement).to eq "date || credit || debit || balance\n"
+    # expect(account.print_statement).to eq "date || credit || debit || balance\n"
+    expect(account.show_balance).to eq 0 
   end
 
   describe '#add_deposite' do

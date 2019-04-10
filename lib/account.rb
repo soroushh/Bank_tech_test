@@ -1,5 +1,5 @@
 class Account
-  attr_reader :balance, :account_history
+  # attr_reader :balance, :account_history
   def initialize(balance = 0)
     @balance = balance
     @account_history = []
@@ -18,6 +18,10 @@ class Account
   def print_statement
     print_statement_string
   end
+
+  def show_balance
+    @balance
+  end 
 
   private
 

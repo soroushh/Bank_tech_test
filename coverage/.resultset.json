@@ -3,7 +3,7 @@
     "coverage": {
       "/Users/soroushkhosravi/projects/Bank_tech_test/lib/account.rb": [
         1,
-        1,
+        null,
         1,
         4,
         4,
@@ -20,17 +20,21 @@
         null,
         null,
         1,
-        4,
+        3,
+        null,
+        null,
+        1,
+        1,
         null,
         null,
         1,
         null,
         1,
-        4,
-        4,
+        3,
+        3,
         5,
         null,
-        4,
+        3,
         null,
         null,
         1,
@@ -43,6 +47,6 @@
         null
       ]
     },
-    "timestamp": 1554893411
+    "timestamp": 1554904566
   }
 }
