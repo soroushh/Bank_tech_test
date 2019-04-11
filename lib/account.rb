@@ -6,12 +6,12 @@ class Account
   end
 
   def add_deposite(money_ammount, date = Time.now.strftime('%d/%m/%Y'))
-    @balance += money_ammount
+    increase_balance(money_ammount)
     add_transaction_to_account_history_depositing(money_ammount, date)
   end
 
   def withdraw(money_ammount, date = Time.now.strftime('%d/%m/%Y'))
-    @balance -= money_ammount
+    decrease_balance(money_ammount)
     add_transaction_to_account_history__withdrawing(money_ammount, date)
   end
 
@@ -30,5 +30,13 @@ class Account
 
   def add_transaction_to_account_history__withdrawing(money_ammount, date = Time.now.strftime('%d/%m/%Y'))
     @account_history.push(date: date, credit: '', debit: money_ammount.to_s + '.00', balance: @balance.to_s + '.00')
+  end
+
+  def decrease_balance(money_ammount)
+    @balance -= money_ammount
+  end
+
+  def increase_balance(money_ammount)
+    @balance += money_ammount
   end
 end
