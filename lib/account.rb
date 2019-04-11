@@ -15,24 +15,27 @@ class Account
     add_transaction_to_account_history__withdrawing(money_ammount, date)
   end
 
-  def print_statement
-    print_statement_string
-  end
+  # def print_statement
+  #   print_statement_string
+  # end
 
   def show_balance
     @balance
-  end 
-
-  private
-
-  def print_statement_string
-    the_statement_text = "date || credit || debit || balance\n"
-    @account_history.reverse.each do |transfer|
-      the_statement_text += "#{transfer[:date]} || #{transfer[:credit]} || #{transfer[:debit]} || #{transfer[:balance]}\n"
-    end
-    the_statement_text
   end
 
+  def show_history()
+    @account_history
+  end
+
+  private
+  # def print_statement_string
+  #   the_statement_text = "date || credit || debit || balance\n"
+  #   @account_history.reverse.each do |transfer|
+  #     the_statement_text += "#{transfer[:date]} || #{transfer[:credit]} || #{transfer[:debit]} || #{transfer[:balance]}\n"
+  #   end
+  #   the_statement_text
+  # end
+  #
   def add_transaction_to_account_history_depositing(money_ammount, date = Time.now.strftime('%d/%m/%Y'))
     @account_history.push(date: date, credit: money_ammount.to_s + '.00', debit: '', balance: @balance.to_s + '.00')
   end
