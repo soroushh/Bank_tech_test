@@ -12,7 +12,11 @@ account.add_deposite(2000)
 
 account.withdraw(500)
 
-account.print_statement()
+require "./lib/statement.rb"
+
+statement = Statement.new(account)
+
+statement.print_statement()
 
 we expect to receive the following
 text on the screen :
