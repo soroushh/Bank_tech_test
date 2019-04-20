@@ -19,5 +19,5 @@ describe Account do
       expect(subject_2.show_balance).to eq 500
     end
   end
-  
+
 end

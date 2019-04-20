@@ -1,5 +1,9 @@
 ### Bank tech test
 
+
+The picture of the model is shown in the following picture:
+<img src="Model_of_bank_tech_test.png" />
+
 In this repository, we are trying to work on a bank tech test with the following criteria:
 
 Bank tech test
